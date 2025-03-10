@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4; /* Light background */
+}
+
+.container {
+    max-width: 600px; /* Center the form */
+    margin: 80px auto; /* Vertical center with margin */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.form-header {
+    text-align: center;
+    font-size: 2em;
+    color: #333; /* Dark color for header */
+    margin-bottom: 20px; /* Space below header */
+}
+
+.form-label {
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Darker color for labels */
+}
+
+.form-control, .form-select {
+    border-radius: 4px; /* Rounded corners for inputs */
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+.btn-primary {
+    background-color: #cda678; /* Primary button color */
+    border: none; /* No border */
+}
+
+.btn-primary:hover {
+    background-color: #db4437; /* Darker shade on hover */
+}
+
+.mb-3 {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+
+copy
+css
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #cda678; /* Brand color */
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #db4437;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #cda678;
+}

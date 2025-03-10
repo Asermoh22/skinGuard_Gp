@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for the page */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full height */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #cda678; /* Brand color */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-links {
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+}
+
+.nav-link {
+    color: #333; /* Dark text color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Spacing between links */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.nav-link:hover {
+    color: #db4437; /* Change text color on hover */
+}
+
+.btn-danger {
+    margin-left: 15px; /* Space from the last link */
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px; /* Space below the fixed navbar */
+    padding: 20px; /* Padding for content */
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile-header {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-item {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-item:last-child {
+    border-bottom: none;
+}
+
+.profile-item strong {
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
