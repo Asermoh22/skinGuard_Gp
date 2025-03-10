@@ -17,7 +17,7 @@
             <input type="hidden" name="direction" value="{{ request('direction', 'asc') }}">
             <button type="submit" name="direction" value="{{ request('direction') == 'asc' ? 'desc' : 'asc' }}" class="sort-button">
                 {{ request('direction') == 'asc' ? 'Descending' : 'Ascending' }}
-             <a href="{{ route('doctors.findDoctorsByCity', request()->only(['sort', 'direction'])) }}" class="find-city-link">Find by City</a>
+            <a href="{{ route('doctors.findDoctorsByCity', request()->only(['sort', 'direction'])) }}" class="find-city-link">Find by City</a>
 
             </button>
         </form>

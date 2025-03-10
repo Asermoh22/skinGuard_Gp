@@ -5,7 +5,7 @@ use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\openaicontroller;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admincontroller;
-
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SkinController;
 use Illuminate\Support\Facades\Route;
@@ -58,7 +58,7 @@ Route::middleware('islogin')->group(function(){
 
 Route::get('/generate-slots/doctors/{id}', [DoctorController::class, 'generateSlots'])->name('doctors.generateSlots');
 
-
+Route::get("/bookingEmail",[EmailController::class,'sendBookingEmail']);
     
 });
 

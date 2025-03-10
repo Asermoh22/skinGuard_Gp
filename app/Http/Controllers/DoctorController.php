@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
-use App\Models\City;
-use App\Models\Doctor;
 use Auth;
-use App\Models\Slot;
 use Carbon\Carbon;
+use App\Models\City;
+use App\Models\Slot;
+use App\Models\Doctor;
+use App\Models\Booking;
+use App\Mail\welcomeemail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class DoctorController extends Controller
 {
@@ -115,20 +117,36 @@ class DoctorController extends Controller
     }
 
 
-    public function bookSlot(Request $request ,$id){
-        $slot=Slot::findOrFail($id);
-
-        $slot->update(['is_booked'=>true]);
-
-        
+    public function bookSlot(Request $request, $id)
+    {
+        $slot = Slot::findOrFail($id);
+        $user = Auth::user();
+    
+        $existingBooking = Booking::where('user_id', $user->id)
+                                  ->where('slot_id', $slot->id)
+                                  ->first();
+    
+        if ($existingBooking) {
+            return redirect()->back()->with('error', 'You have already booked this slot.');
+        }
+    
+        // Mark slot as booked
+        $slot->update(['is_booked' => true]);
+    
+        // Store booking
         Booking::create([
-            'user_id'=>Auth::user()->id,
-            'slot_id'=>$slot->id
+            'user_id' => $user->id,
+            'slot_id' => $slot->id
         ]);
-
-        return back()->with('success', 'Slot booked successfully!');
-
+    
+        app(EmailController::class)->sendBookingEmail($slot->id);
+    
+        return redirect()->back()->with('success', 'Booking successful! Check your email.');
     }
+    
+    
+    
+    
 
 
     public function cancelbooking($id)
