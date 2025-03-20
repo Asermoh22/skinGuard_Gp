@@ -10,7 +10,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SkinController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
-
+use App\Http\Controllers\ChatController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +37,9 @@ Route::fallback(fn()=>redirect(route('auth.login')));
 Route::middleware('islogin')->group(function(){
     Route::fallback(fn()=>redirect(route('main.main')));
 
+
+    Route::post('/chat', [ChatController::class, 'sendMessage']);
+    
 
     Route::get('logout',[Authcontroller::class,'logout'])->name('auth.logout');
     
