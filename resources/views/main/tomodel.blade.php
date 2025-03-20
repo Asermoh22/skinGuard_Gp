@@ -28,13 +28,13 @@ function closeAlert() {
 }
 </script>
 
-<div class="navbar">
-    <div class="navbar-brand">SKINGUARD</div>
-    <div class="navbar-links">
-        <a href="{{route('main.main')}}" class="nav-link">Home</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link">Contact</a>
-        <a class="nav-link" href={{route('doctors.finddoctors')}} >Find Doctors</a>
+<div class="navbar" id="navbar">
+    <div class="navbar-brand" id="navbar-brand">SKINGUARD</div>
+    <div class="navbar-links" style="display: flex;align-items: center;">
+        <a href="{{route('main.main')}}" class="nav-link" id="nav-link">Home</a>
+        <a href="/about" class="nav-link" id="nav-link">About</a>
+        <a href="/contact" class="nav-link" id="nav-link">Contact</a>
+        <a class="nav-link" href={{route('doctors.finddoctors')}} id="nav-link" >Find Doctors</a>
 
     </div>
 </div>
@@ -63,7 +63,8 @@ function closeAlert() {
 @if(session('image'))
     <div class="classification-result">
         <h3>Classification Result:</h3>
-        <p><strong>Condition:</strong> {{ session('image')->classification }}</p>
+        <!---<p><strong>Condition:</strong> {{ session('image')->classification }}</p>--->
+        <p>{{ session('image')->classification }} ({{ session('classification_ar') }})</p>
     </div>
 @endif
 <script>
@@ -89,11 +90,6 @@ function closeAlert() {
 
 
 
-
-
-
-
-
 <!-- Chat Widget Code -->
 <div class="chat-widget" id="chat-widget">
     <img src="{{ asset('speech-bubbles.png') }}" alt="Chat Icon">
@@ -112,6 +108,7 @@ function closeAlert() {
 </div>
 
 <style>
+    
     .chat-widget img {
         width: 50px;
         height: 50px;

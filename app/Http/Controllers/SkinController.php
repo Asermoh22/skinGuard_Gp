@@ -61,8 +61,9 @@ $imageEntry = Image::create([
 return redirect()->route('main.tomodel')->with([
     'success' => 'Image uploaded and classified successfully.',
     'image' => $imageEntry,
-    'classification_ar' => $classificationAr
+    'classification_ar' => $classificationAr // Send Arabic name to UI
 ]);
+
 
 
 
