@@ -1,6 +1,6 @@
 # Human Skin Disease Detection AI System
 
-![Skin Disease Detection](https://via.placeholder.com/800x300.png?text=Skin+Disease+Detection+AI)  
+![Skin Disease Detection]([https://via.placeholder.com/800x300.png?text=Skin+Disease+Detection+AI](https://www.google.com/url?sa=i&url=https%3A%2F%2Fv0.dev%2Fcommunity%2Fnewest&psig=AOvVaw2xEIt1wofL1J7pm7_49BIJ&ust=1749126302500000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDf3Mjh140DFQAAAAAdAAAAABAE)https://www.google.com/url?sa=i&url=https%3A%2F%2Fv0.dev%2Fcommunity%2Fnewest&psig=AOvVaw2xEIt1wofL1J7pm7_49BIJ&ust=1749126302500000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDf3Mjh140DFQAAAAAdAAAAABAE)  
 
 An end-to-end AI system for detecting human skin diseases using deep learning models, deployed via Flask API and integrated with a SkinGuard web application.
 
