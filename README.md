@@ -46,7 +46,7 @@ An end-to-end AI system for detecting human skin diseases using deep learning mo
 ### System Flow
 ```mermaid
 graph TD
-    A[Client Web/Mobile App] -->|HTTP Request| B[Flask API Server]
+    A[Client Web App] -->|HTTP Request| B[Flask API Server]
     B --> C[Load Model]
     C --> D[5-class ViT Model]
     C --> E[10-class ViT Model]
