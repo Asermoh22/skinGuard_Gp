@@ -14,9 +14,13 @@ An end-to-end AI system for detecting human skin diseases using deep learning mo
 ### 5-Class Classification (1,000 images per class)
 | Model               | Test Accuracy |
 |---------------------|---------------|
-| VGG19               | 94.7%         |
 | MobileNet           | 92%           |
+| EfficientNetB3      | 93.3%         |
+| InceptionV3         | 93.5%         |
+| VGG19               | 94.7%         |
+| ResNet152           | 96.8%         |
 | Vision Transformer  | **98%**       |
+
 
 ### 10-Class Classification (1,500 images per class)
 | Model               | Test Accuracy |
