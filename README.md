@@ -49,7 +49,6 @@ graph TD
     A[Client Web App] -->|HTTP Request| B[Flask API Server]
     B --> C[Load Model]
     C --> E[10-class ViT Model]
-    D --> F[Prediction]
-    E --> F
+    E --> F[Prediction]
     F -->|JSON Response| A
     B --> G[Log to Database]
