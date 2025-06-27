@@ -34,8 +34,14 @@ $classMapping = [
     1 => ["en" => "Melanocytic", "ar" => "وحمات ميلانينية"],
     2 => ["en" => "Melanoma", "ar" => "سرطان الجلد"],
     3 => ["en" => "Eczema", "ar" => "الأكزيما"],
-    4 => ["en" => "Basal Cell", "ar" => "سرطان الخلايا القاعدية"]
+    4 => ["en" => "Basal Cell", "ar" => "سرطان الخلايا القاعدية"],
+    5 => ["en" => "Psoriasis", "ar" => "الصدفية"],
+    6 => ["en" => "Tinea Ringworms Candidiasis", "ar" => "سعفة / القوباء الحلقية / المبيضات"],
+    7 => ["en" => "Warts Molluscum", "ar" => "الثآليل / المليساء المعدية"],
+    8 => ["en" => "Atopic Dermatitis", "ar" => "التهاب الجلد التأتبي"],
+    9 => ["en" => "Benign Keratosis", "ar" => "التقرن الحميد"]
 ];
+
 
 // Send the image to the API for classification
 $response = Http::attach(
@@ -45,7 +51,7 @@ $response = Http::attach(
 )->post('http://127.0.0.1:5000/predict');
 
 // Get predicted class number
-$predictedClass = $response->json()['predicted_class'] ?? null;
+$predictedClass = $response->json()['class_index'] ?? null;
 
 // Map predicted class to English and Arabic names
 $classificationEn = $classMapping[$predictedClass]['en'] ?? 'Unknown';

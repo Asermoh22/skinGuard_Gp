@@ -14,7 +14,7 @@ class DoctorSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('doctors')->truncate();
+        DB::table('doctors')->delete();
         $doctors = [
             [
                 "name" => "Dr. Samar Hossam Omar",

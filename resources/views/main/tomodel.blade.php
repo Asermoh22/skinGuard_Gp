@@ -62,11 +62,21 @@ function closeAlert() {
 </script>
 @if(session('image'))
     <div class="classification-result">
-        <h3>Classification Result:</h3>
         <!---<p><strong>Condition:</strong> {{ session('image')->classification }}</p>--->
-        <p>{{ session('image')->classification }} ({{ session('classification_ar') }})</p>
+        <p><strong>{{ session('image')->classification }} ({{ session('classification_ar') }})</strong></p>
     </div>
 @endif
+<style>
+    .classification-result>p {
+        display: flex;
+        font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        padding: 30px;
+    }
+
+</style>
 <script>
     const fileInput = document.getElementById('image');
     const previewImg = document.getElementById('previewImg');
